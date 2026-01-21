@@ -1,0 +1,3 @@
+fromPort,toPort,name,address,city,state,zip,card,year,nameOnCard
+Boston,Berlin,Ivana,Calle 123,Buenos Aires,CABA,1234,2147654928745362,2027,Ivana Mas
+San Diego,London,Juan,Av Siempre Viva 742,New York,NY,10001,1234567890123456,2025,Juan Perez
