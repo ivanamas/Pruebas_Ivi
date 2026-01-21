@@ -1,0 +1,1674 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.4.1 (Python 3.14.2 on win32)" generated="2026-01-21T15:50:47.860162" rpa="false" schemaversion="5">
+<suite id="s1" name="Api" source="C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api">
+<suite id="s1-s1" name="Cocktail Api Test" source="C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\cocktail_api_test.robot">
+<test id="s1-s1-t1" name="Buscar Tragos Sin Alcohol" line="12">
+<kw name="Create Session" owner="RequestsLibrary">
+<msg time="2026-01-21T15:50:48.063120" level="INFO">Creating Session using : alias=cocktail, url=https://www.thecocktaildb.com/api/json/v1/1, headers={},                     cookies={}, auth=None, timeout=None, proxies=None, verify=False,                     debug=0 </msg>
+<arg>cocktail</arg>
+<arg>${BASE_URL}</arg>
+<doc>Create Session: create a HTTP session to a server</doc>
+<status status="PASS" start="2026-01-21T15:50:48.062511" elapsed="0.001058"/>
+</kw>
+<kw name="GET On Session" owner="RequestsLibrary">
+<msg time="2026-01-21T15:50:48.494120" level="INFO">GET Request : url=https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic 
+ path_url=/api/json/v1/1/filter.php?a=Non_Alcoholic 
+ headers={'User-Agent': 'python-requests/2.32.5', 'Accept-Encoding': 'gzip, deflate, zstd', 'Accept': '*/*', 'Connection': 'keep-alive'} 
+ body=None 
+ </msg>
+<msg time="2026-01-21T15:50:48.494530" level="INFO">GET Response : url=https://www.thecocktaildb.com/api/json/v1/1/filter.php?a=Non_Alcoholic 
+ status=200, reason=OK 
+ headers={'Date': 'Wed, 21 Jan 2026 18:50:46 GMT', 'Content-Type': 'application/json', 'Transfer-Encoding': 'chunked', 'Connection': 'keep-alive', 'Server': 'cloudflare', 'X-Powered-By': 'PHP/8.4.14', 'Access-Control-Allow-Origin': '*', 'cf-cache-status': 'DYNAMIC', 'Nel': '{"report_to":"cf-nel","success_fraction":0.0,"max_age":604800}', 'Report-To': '{"group":"cf-nel","max_age":604800,"endpoints":[{"url":"https://a.nel.cloudflare.com/report/v4?s=cY%2FE9SIxAmwtQOHPDuKkWhQbxLmVtzy8nbTKTKRIRBW822kBuX2L0UTXelFGl5yaRE40iKN%2Fvlu22hk03WHlQTwptVnEwqSlP4SM1pH7hOyYadjanw%3D%3D"}]}', 'Content-Encoding': 'zstd', 'CF-RAY': '9c18ffc98ae2c0ff-EZE', 'alt-svc': 'h3=":443"; ma=86400'} 
+ body={"drinks":[{"strDrink":"Afterglow","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/vuquyv1468876052.jpg","idDrink":"12560"},{"strDrink":"Alice Cocktail","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/qyqtpv1468876144.jpg","idDrink":"12562"},{"strDrink":"Aloha Fruit punch","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/wsyvrt1468876267.jpg","idDrink":"12862"},{"strDrink":"Apello","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/uptxtv1468876415.jpg","idDrink":"15106"},{"strDrink":"Apple Berry Smoothie","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/xwqvur1468876473.jpg","idDrink":"12710"},{"strDrink":"Apple Karate","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/syusvw1468876634.jpg","idDrink":"12564"},{"strDrink":"Banana Cantaloupe Smoothie","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/uqxqsy1468876703.jpg","idDrink":"12708"},{"strDrink":"Banana Milk Shake","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/rtwwsx1472720307.jpg","idDrink":"12654"},{"strDrink":"Banana Strawberry Shake","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/vqquwx1472720634.jpg","idDrink":"12656"},{"strDrink":"Banana Strawberry Shake Daiquiri","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/uvypss1472720581.jpg","idDrink":"12658"},{"strDrink":"Bora Bora","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/xwuqvw1473201811.jpg","idDrink":"12572"},{"strDrink":"Castillian Hot Chocolate","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/3nbu4a1487603196.jpg","idDrink":"12730"},{"strDrink":"Chocolate Beverage","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/jbqrhv1487603186.jpg","idDrink":"12732"},{"strDrink":"Chocolate Drink","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/q7w4xu1487603180.jpg","idDrink":"12734"},{"strDrink":"Coke and Drops","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/yrtxxp1472719367.jpg","idDrink":"17108"},{"strDrink":"Cranberry Punch","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/mzgaqu1504389248.jpg","idDrink":"12890"},{"strDrink":"Drinking Chocolate","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/u6jrdf1487603173.jpg","idDrink":"12736"},{"strDrink":"Egg Cream","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/mvis731484430445.jpg","idDrink":"12668"},{"strDrink":"Frapp\u00e9","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/vqwryq1441245927.jpg","idDrink":"12768"},{"strDrink":"Fruit Cooler","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/i3tfn31484430499.jpg","idDrink":"12670"},{"strDrink":"Fruit Flip-Flop","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/nfdx6p1484430633.jpg","idDrink":"12672"},{"strDrink":"Fruit Shake","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/q0fg2m1484430704.jpg","idDrink":"12674"},{"strDrink":"Grape lemon pineapple Smoothie","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/54z5h71487603583.jpg","idDrink":"12712"},{"strDrink":"Holloween Punch","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/lfeoe41504888925.jpg","idDrink":"12954"},{"strDrink":"Hot Chocolate to Die for","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/0lrmjp1487603166.jpg","idDrink":"12738"},{"strDrink":"Iced Coffee","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/ytprxy1454513855.jpg","idDrink":"12770"},{"strDrink":"Ipamena","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/yswuwp1469090992.jpg","idDrink":"17176"},{"strDrink":"Just a Moonmint","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/znald61487604035.jpg","idDrink":"12688"},{"strDrink":"Kill the cold Smoothie","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/7j1z2e1487603414.jpg","idDrink":"12720"},{"strDrink":"Kiwi Papaya Smoothie","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/jogv4w1487603571.jpg","idDrink":"12714"},{"strDrink":"Lassi - A South Indian Drink","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/iq6scx1487603980.jpg","idDrink":"12690"},{"strDrink":"Lassi - Mango","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/1bw6sd1487603816.jpg","idDrink":"12698"},{"strDrink":"Lassi - Sweet","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/9jeifz1487603885.jpg","idDrink":"12696"},{"strDrink":"Lassi Khara","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/m1suzm1487603970.jpg","idDrink":"12692"},{"strDrink":"Lassi Raita","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/s4x0qj1487603933.jpg","idDrink":"12694"},{"strDrink":"Lemouroudji","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/eirmo71487603745.jpg","idDrink":"12702"},{"strDrink":"Limeade","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/5jdp5r1487603680.jpg","idDrink":"12704"},{"strDrink":"Mango Orange Smoothie","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/vdp2do1487603520.jpg","idDrink":"12716"},{"strDrink":"Masala Chai","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/uyrpww1441246384.jpg","idDrink":"12774"},{"strDrink":"Melya","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/xwtptq1441247579.jpg","idDrink":"12776"},{"strDrink":"Microwave Hot Cocoa","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/8y4x5f1487603151.jpg","idDrink":"12744"},{"strDrink":"Nuked Hot Chocolate","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/xcu6nb1487603142.jpg","idDrink":"12746"},{"strDrink":"Orange Scented Hot Chocolate","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/hdzwrh1487603131.jpg","idDrink":"12748"},{"strDrink":"Orangeade","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/ytsxxw1441167732.jpg","idDrink":"12618"},{"strDrink":"Pineapple Gingerale Smoothie","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/eg9i1d1487603469.jpg","idDrink":"12718"},{"strDrink":"Pysch Vitamin Light","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/xsqsxw1441553580.jpg","idDrink":"15092"},{"strDrink":"Rail Splitter","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/stsuqq1441207660.jpg","idDrink":"12630"},{"strDrink":"Spanish chocolate","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/pra8vt1487603054.jpg","idDrink":"12750"},{"strDrink":"Spiced Peach Punch","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/qxvypq1468924331.jpg","idDrink":"13032"},{"strDrink":"Spiking coffee","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/isql6y1487602375.jpg","idDrink":"12780"},{"strDrink":"Strawberry Lemonade","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/spvvxp1468924425.jpg","idDrink":"13036"},{"strDrink":"Strawberry Shivers","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/9h1vvt1487603404.jpg","idDrink":"12722"},{"strDrink":"Sweet Bananas","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/sxpcj71487603345.jpg","idDrink":"12724"},{"strDrink":"Thai Coffee","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/wquwxs1441247025.jpg","idDrink":"12782"},{"strDrink":"Thai Iced Coffee","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/rqpypv1441245650.jpg","idDrink":"12784"},{"strDrink":"Thai Iced Tea","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/trvwpu1441245568.jpg","idDrink":"12786"},{"strDrink":"Tomato Tang","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/869qr81487603278.jpg","idDrink":"12726"},{"strDrink":"Yoghurt Cooler","strDrinkThumb":"https:\/\/www.thecocktaildb.com\/images\/media\/drink\/trttrv1441254466.jpg","idDrink":"12728"}]} 
+ </msg>
+<msg time="2026-01-21T15:50:48.494824" level="INFO">C:\Users\IvanaMasciangioli\AppData\Local\Programs\Python\Python314\Lib\site-packages\urllib3\connectionpool.py:1097: InsecureRequestWarning: Unverified HTTPS request is being made to host 'www.thecocktaildb.com'. Adding certificate verification is strongly advised. See: https://urllib3.readthedocs.io/en/latest/advanced-usage.html#tls-warnings
+  warnings.warn(</msg>
+<msg time="2026-01-21T15:50:48.495381" level="INFO">${response} = &lt;Response [200]&gt;</msg>
+<var>${response}</var>
+<arg>cocktail</arg>
+<arg>url=/filter.php?a=${INGREDIENTE}</arg>
+<doc>Sends a GET request on a previously created HTTP Session.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.064439" elapsed="0.431538"/>
+</kw>
+<kw name="Should Be Equal As Strings" owner="BuiltIn">
+<msg time="2026-01-21T15:50:48.498181" level="INFO">Argument types are:
+&lt;class 'int'&gt;
+&lt;class 'str'&gt;</msg>
+<arg>${response.status_code}</arg>
+<arg>200</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.496549" elapsed="0.001976"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.499846" level="INFO">${drinks} = [{'strDrink': 'Afterglow', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/vuquyv1468876052.jpg', 'idDrink': '12560'}, {'strDrink': 'Alice Cocktail', 'strDrinkThumb': 'https://www.t...</msg>
+<var>${drinks}</var>
+<arg>${response.json()}</arg>
+<arg>drinks</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.498901" elapsed="0.001307"/>
+</kw>
+<kw name="Get Length" owner="BuiltIn">
+<msg time="2026-01-21T15:50:48.501487" level="INFO">Length is 58.</msg>
+<msg time="2026-01-21T15:50:48.501799" level="INFO">${cantidad} = 58</msg>
+<var>${cantidad}</var>
+<arg>${drinks}</arg>
+<doc>Returns and logs the length of the given item as an integer.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.500603" elapsed="0.001439"/>
+</kw>
+<kw name="Log" owner="BuiltIn">
+<msg time="2026-01-21T15:50:48.503044" level="INFO">Se encontraron 58 drinks Non_Alcoholic</msg>
+<arg>Se encontraron ${cantidad} drinks ${INGREDIENTE}</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.502400" elapsed="0.000893"/>
+</kw>
+<kw name="Remove File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.504693" level="INFO" html="true">Removed file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<doc>Removes a file with the given path.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.503626" elapsed="0.001352"/>
+</kw>
+<kw name="Create File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.507908" level="INFO" html="true">Created file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;html&gt;&lt;body&gt;&lt;h1&gt;Tragos ${INGREDIENTE}&lt;/h1&gt;</arg>
+<doc>Creates a file with the given content and encoding.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.505603" elapsed="0.002605"/>
+</kw>
+<for flavor="IN">
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.510362" level="INFO">${nombre} = Afterglow</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.510006" elapsed="0.000508"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.510985" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/vuquyv1468876052.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.510683" elapsed="0.000661"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.512568" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.511527" elapsed="0.001302"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Afterglow', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/vuquyv1468876052.jpg', 'idDrink': '12560'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.509591" elapsed="0.003387"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.513628" level="INFO">${nombre} = Alice Cocktail</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.513374" elapsed="0.000405"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.514279" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/qyqtpv1468876144.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.513941" elapsed="0.000743"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.517212" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.514990" elapsed="0.002744"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Alice Cocktail', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/qyqtpv1468876144.jpg', 'idDrink': '12562'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.513184" elapsed="0.004778"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.519187" level="INFO">${nombre} = Aloha Fruit punch</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.518582" elapsed="0.000992"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.520443" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/wsyvrt1468876267.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.519846" elapsed="0.000779"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.522098" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.520806" elapsed="0.001592"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Aloha Fruit punch', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/wsyvrt1468876267.jpg', 'idDrink': '12862'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.518293" elapsed="0.004633"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.524924" level="INFO">${nombre} = Apello</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.524007" elapsed="0.001353"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.526210" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/uptxtv1468876415.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.525693" elapsed="0.000734"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.528065" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.526702" elapsed="0.001906"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Apello', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/uptxtv1468876415.jpg', 'idDrink': '15106'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.523457" elapsed="0.005438"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.530322" level="INFO">${nombre} = Apple Berry Smoothie</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.529753" elapsed="0.000745"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.530928" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/xwqvur1468876473.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.530659" elapsed="0.000408"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.532356" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.531214" elapsed="0.001388"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Apple Berry Smoothie', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/xwqvur1468876473.jpg', 'idDrink': '12710'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.529404" elapsed="0.003320"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.533391" level="INFO">${nombre} = Apple Karate</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.533085" elapsed="0.000452"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.534003" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/syusvw1468876634.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.533697" elapsed="0.000439"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.535298" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.534289" elapsed="0.001303"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Apple Karate', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/syusvw1468876634.jpg', 'idDrink': '12564'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.532881" elapsed="0.002913"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.537314" level="INFO">${nombre} = Banana Cantaloupe Smoothie</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.536650" elapsed="0.000825"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.538104" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/uqxqsy1468876703.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.537645" elapsed="0.001167"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.541480" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.539122" elapsed="0.003043"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Banana Cantaloupe Smoothie', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/uqxqsy1468876703.jpg', 'idDrink': '12708'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.535990" elapsed="0.006398"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.543460" level="INFO">${nombre} = Banana Milk Shake</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.542953" elapsed="0.000840"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.544665" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/rtwwsx1472720307.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.544123" elapsed="0.000774"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.546074" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.545096" elapsed="0.001163"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Banana Milk Shake', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/rtwwsx1472720307.jpg', 'idDrink': '12654'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.542648" elapsed="0.003703"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.547023" level="INFO">${nombre} = Banana Strawberry Shake</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.546723" elapsed="0.000716"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.549536" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/vqquwx1472720634.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.548174" elapsed="0.002124"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.551829" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.550584" elapsed="0.001596"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Banana Strawberry Shake', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/vqquwx1472720634.jpg', 'idDrink': '12656'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.546486" elapsed="0.005856"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.553796" level="INFO">${nombre} = Banana Strawberry Shake Daiquiri</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.553024" elapsed="0.000991"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.554795" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/uvypss1472720581.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.554259" elapsed="0.000761"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.557556" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.555342" elapsed="0.002532"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Banana Strawberry Shake Daiquiri', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/uvypss1472720581.jpg', 'idDrink': '12658'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.552608" elapsed="0.005498"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.559060" level="INFO">${nombre} = Bora Bora</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.558617" elapsed="0.000776"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.560598" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/xwuqvw1473201811.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.559789" elapsed="0.001061"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.562303" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.561101" elapsed="0.001442"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Bora Bora', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/xwuqvw1473201811.jpg', 'idDrink': '12572'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.558342" elapsed="0.004407"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.564234" level="INFO">${nombre} = Castillian Hot Chocolate</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.563696" elapsed="0.000923"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.565603" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/3nbu4a1487603196.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.564949" elapsed="0.000939"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.567916" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.566252" elapsed="0.001903"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Castillian Hot Chocolate', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/3nbu4a1487603196.jpg', 'idDrink': '12730'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.563216" elapsed="0.005069"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.569426" level="INFO">${nombre} = Chocolate Beverage</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.568902" elapsed="0.000809"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.570250" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/jbqrhv1487603186.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.569932" elapsed="0.000585"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.571729" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.570710" elapsed="0.001212"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Chocolate Beverage', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/jbqrhv1487603186.jpg', 'idDrink': '12732'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.568508" elapsed="0.003513"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.573696" level="INFO">${nombre} = Chocolate Drink</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.573142" elapsed="0.000736"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.574424" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/q7w4xu1487603180.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.574075" elapsed="0.000546"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.575975" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.574836" elapsed="0.001427"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Chocolate Drink', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/q7w4xu1487603180.jpg', 'idDrink': '12734'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.572200" elapsed="0.004178"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.577229" level="INFO">${nombre} = Coke and Drops</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.576745" elapsed="0.000618"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.577764" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/yrtxxp1472719367.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.577503" elapsed="0.000456"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.579222" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.578124" elapsed="0.001331"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Coke and Drops', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/yrtxxp1472719367.jpg', 'idDrink': '17108'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.576545" elapsed="0.003029"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.580513" level="INFO">${nombre} = Cranberry Punch</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.580067" elapsed="0.000698"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.581611" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/mzgaqu1504389248.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.581025" elapsed="0.000789"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.583675" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.582253" elapsed="0.001890"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Cranberry Punch', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/mzgaqu1504389248.jpg', 'idDrink': '12890'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.579744" elapsed="0.004496"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.585053" level="INFO">${nombre} = Drinking Chocolate</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.584692" elapsed="0.000495"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.585671" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/u6jrdf1487603173.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.585332" elapsed="0.000453"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.586945" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.585913" elapsed="0.001422"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Drinking Chocolate', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/u6jrdf1487603173.jpg', 'idDrink': '12736'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.584420" elapsed="0.003075"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.588335" level="INFO">${nombre} = Egg Cream</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.587967" elapsed="0.000651"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.589106" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/mvis731484430445.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.588779" elapsed="0.000764"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.591112" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.589923" elapsed="0.001433"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Egg Cream', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/mvis731484430445.jpg', 'idDrink': '12668'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.587712" elapsed="0.003767"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.592445" level="INFO">${nombre} = Frappé</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.591888" elapsed="0.000974"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.593615" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/vqwryq1441245927.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.593166" elapsed="0.000925"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.595641" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.594269" elapsed="0.001578"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Frappé', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/vqwryq1441245927.jpg', 'idDrink': '12768'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.591652" elapsed="0.004322"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.596536" level="INFO">${nombre} = Fruit Cooler</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.596271" elapsed="0.000510"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.597232" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/i3tfn31484430499.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.596931" elapsed="0.000473"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.598657" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.597541" elapsed="0.001401"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Fruit Cooler', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/i3tfn31484430499.jpg', 'idDrink': '12670'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.596115" elapsed="0.003013"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.599951" level="INFO">${nombre} = Fruit Flip-Flop</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.599641" elapsed="0.000527"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.600731" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/nfdx6p1484430633.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.600375" elapsed="0.000695"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.602117" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.601216" elapsed="0.001105"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Fruit Flip-Flop', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/nfdx6p1484430633.jpg', 'idDrink': '12672'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.599339" elapsed="0.003108"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.603148" level="INFO">${nombre} = Fruit Shake</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.602869" elapsed="0.000396"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.603663" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/q0fg2m1484430704.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.603402" elapsed="0.000511"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.604939" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.604089" elapsed="0.001076"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Fruit Shake', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/q0fg2m1484430704.jpg', 'idDrink': '12674'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.602620" elapsed="0.002696"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.607101" level="INFO">${nombre} = Grape lemon pineapple Smoothie</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.606505" elapsed="0.000851"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.608351" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/54z5h71487603583.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.607630" elapsed="0.000981"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.610133" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.608920" elapsed="0.001478"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Grape lemon pineapple Smoothie', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/54z5h71487603583.jpg', 'idDrink': '12712'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.605789" elapsed="0.004752"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.611574" level="INFO">${nombre} = Holloween Punch</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.611075" elapsed="0.000644"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.612356" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/lfeoe41504888925.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.611880" elapsed="0.000642"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.613650" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.612684" elapsed="0.001218"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Holloween Punch', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/lfeoe41504888925.jpg', 'idDrink': '12954'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.610765" elapsed="0.003244"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.614643" level="INFO">${nombre} = Hot Chocolate to Die for</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.614387" elapsed="0.000414"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.615404" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/0lrmjp1487603166.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.614985" elapsed="0.000749"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.616721" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.615927" elapsed="0.001008"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Hot Chocolate to Die for', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/0lrmjp1487603166.jpg', 'idDrink': '12738'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.614151" elapsed="0.002879"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.617764" level="INFO">${nombre} = Iced Coffee</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.617440" elapsed="0.000463"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.618394" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/ytprxy1454513855.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.618061" elapsed="0.000476"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.619805" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.618702" elapsed="0.001406"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Iced Coffee', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/ytprxy1454513855.jpg', 'idDrink': '12770'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.617150" elapsed="0.003073"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.621139" level="INFO">${nombre} = Ipamena</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.620722" elapsed="0.000616"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.622408" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/yswuwp1469090992.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.621763" elapsed="0.000944"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.624479" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.623185" elapsed="0.001999"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Ipamena', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/yswuwp1469090992.jpg', 'idDrink': '17176'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.620383" elapsed="0.004991"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.626601" level="INFO">${nombre} = Just a Moonmint</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.626053" elapsed="0.001131"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.627928" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/znald61487604035.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.627498" elapsed="0.000702"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.629365" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.628392" elapsed="0.001226"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Just a Moonmint', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/znald61487604035.jpg', 'idDrink': '12688'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.625608" elapsed="0.004119"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.630406" level="INFO">${nombre} = Kill the cold Smoothie</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.630053" elapsed="0.000529"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.631257" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/7j1z2e1487603414.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.630735" elapsed="0.000854"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.632877" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.631893" elapsed="0.001633"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Kill the cold Smoothie', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/7j1z2e1487603414.jpg', 'idDrink': '12720'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.629889" elapsed="0.003833"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.634499" level="INFO">${nombre} = Kiwi Papaya Smoothie</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.634187" elapsed="0.000493"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.635152" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/jogv4w1487603571.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.634824" elapsed="0.000716"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.636845" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.635699" elapsed="0.001701"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Kiwi Papaya Smoothie', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/jogv4w1487603571.jpg', 'idDrink': '12714'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.633893" elapsed="0.003713"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.638661" level="INFO">${nombre} = Lassi - A South Indian Drink</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.638220" elapsed="0.000717"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.640221" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/iq6scx1487603980.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.639225" elapsed="0.001391"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.642161" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.640951" elapsed="0.001573"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Lassi - A South Indian Drink', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/iq6scx1487603980.jpg', 'idDrink': '12690'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.637826" elapsed="0.004864"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.643924" level="INFO">${nombre} = Lassi - Mango</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.643392" elapsed="0.000714"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.644801" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/1bw6sd1487603816.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.644301" elapsed="0.000653"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.646078" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.645147" elapsed="0.001228"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Lassi - Mango', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/1bw6sd1487603816.jpg', 'idDrink': '12698'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.642955" elapsed="0.003537"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.647434" level="INFO">${nombre} = Lassi - Sweet</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.646915" elapsed="0.000701"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.648113" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/9jeifz1487603885.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.647761" elapsed="0.000639"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.649968" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.648594" elapsed="0.001675"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Lassi - Sweet', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/9jeifz1487603885.jpg', 'idDrink': '12696'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.646661" elapsed="0.003761"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.651303" level="INFO">${nombre} = Lassi Khara</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.650858" elapsed="0.000570"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.652285" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/m1suzm1487603970.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.651589" elapsed="0.001065"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.653849" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.652855" elapsed="0.001232"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Lassi Khara', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/m1suzm1487603970.jpg', 'idDrink': '12692'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.650575" elapsed="0.003629"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.654863" level="INFO">${nombre} = Lassi Raita</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.654514" elapsed="0.000643"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.656600" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/s4x0qj1487603933.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.655528" elapsed="0.001490"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.658819" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.657397" elapsed="0.001758"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Lassi Raita', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/s4x0qj1487603933.jpg', 'idDrink': '12694'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.654354" elapsed="0.004982"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.660619" level="INFO">${nombre} = Lemouroudji</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.659996" elapsed="0.000954"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.661535" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/eirmo71487603745.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.661183" elapsed="0.000598"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.663236" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.662028" elapsed="0.001428"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Lemouroudji', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/eirmo71487603745.jpg', 'idDrink': '12702'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.659599" elapsed="0.003980"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.664151" level="INFO">${nombre} = Limeade</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.663890" elapsed="0.000447"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.664861" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/5jdp5r1487603680.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.664501" elapsed="0.000621"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.666596" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.665438" elapsed="0.001333"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Limeade', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/5jdp5r1487603680.jpg', 'idDrink': '12704'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.663737" elapsed="0.003125"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.667484" level="INFO">${nombre} = Mango Orange Smoothie</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.667206" elapsed="0.000611"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.668650" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/vdp2do1487603520.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.668132" elapsed="0.001097"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.670313" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.669393" elapsed="0.001151"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Mango Orange Smoothie', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/vdp2do1487603520.jpg', 'idDrink': '12716'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.667001" elapsed="0.003647"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.671663" level="INFO">${nombre} = Masala Chai</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.671227" elapsed="0.000671"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.672416" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/uyrpww1441246384.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.672124" elapsed="0.000852"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.674777" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.673460" elapsed="0.001583"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Masala Chai', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/uyrpww1441246384.jpg', 'idDrink': '12774'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.670803" elapsed="0.004402"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.676274" level="INFO">${nombre} = Melya</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.675741" elapsed="0.000728"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.677077" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/xwtptq1441247579.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.676665" elapsed="0.000685"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.678871" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.677550" elapsed="0.001534"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Melya', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/xwtptq1441247579.jpg', 'idDrink': '12776'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.675415" elapsed="0.003814"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.679970" level="INFO">${nombre} = Microwave Hot Cocoa</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.679619" elapsed="0.000574"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.680806" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/8y4x5f1487603151.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.680436" elapsed="0.000533"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.681999" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.681125" elapsed="0.001109"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Microwave Hot Cocoa', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/8y4x5f1487603151.jpg', 'idDrink': '12744'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.679369" elapsed="0.002970"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.683062" level="INFO">${nombre} = Nuked Hot Chocolate</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.682751" elapsed="0.000547"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.684000" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/xcu6nb1487603142.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.683545" elapsed="0.000737"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.685921" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.684484" elapsed="0.001666"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Nuked Hot Chocolate', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/xcu6nb1487603142.jpg', 'idDrink': '12746'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.682467" elapsed="0.003804"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.686972" level="INFO">${nombre} = Orange Scented Hot Chocolate</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.686663" elapsed="0.000499"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.687717" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/hdzwrh1487603131.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.687336" elapsed="0.000592"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.688905" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.688081" elapsed="0.001626"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Orange Scented Hot Chocolate', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/hdzwrh1487603131.jpg', 'idDrink': '12748'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.686406" elapsed="0.003679"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.691175" level="INFO">${nombre} = Orangeade</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.690729" elapsed="0.000673"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.692275" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/ytsxxw1441167732.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.691737" elapsed="0.000722"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.693676" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.692691" elapsed="0.001190"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Orangeade', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/ytsxxw1441167732.jpg', 'idDrink': '12618'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.690389" elapsed="0.003611"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.694746" level="INFO">${nombre} = Pineapple Gingerale Smoothie</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.694345" elapsed="0.000557"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.695412" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/eg9i1d1487603469.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.695052" elapsed="0.000597"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.697149" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.695793" elapsed="0.001558"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Pineapple Gingerale Smoothie', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/eg9i1d1487603469.jpg', 'idDrink': '12718'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.694160" elapsed="0.003302"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.698111" level="INFO">${nombre} = Pysch Vitamin Light</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.697739" elapsed="0.000600"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.698737" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/xsqsxw1441553580.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.698482" elapsed="0.000388"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.699825" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.699014" elapsed="0.000980"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Pysch Vitamin Light', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/xsqsxw1441553580.jpg', 'idDrink': '15092'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.697588" elapsed="0.002514"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.701164" level="INFO">${nombre} = Rail Splitter</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.700562" elapsed="0.000856"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.701981" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/stsuqq1441207660.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.701662" elapsed="0.000580"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.703475" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.702444" elapsed="0.001210"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Rail Splitter', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/stsuqq1441207660.jpg', 'idDrink': '12630'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.700270" elapsed="0.003487"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.704475" level="INFO">${nombre} = Spanish chocolate</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.704154" elapsed="0.000484"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.705250" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/pra8vt1487603054.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.704856" elapsed="0.000561"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.707730" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.705651" elapsed="0.002533"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Spanish chocolate', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/pra8vt1487603054.jpg', 'idDrink': '12750'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.703892" elapsed="0.004481"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.709494" level="INFO">${nombre} = Spiced Peach Punch</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.709027" elapsed="0.000638"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.710267" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/qxvypq1468924331.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.709878" elapsed="0.000625"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.711524" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.710676" elapsed="0.001044"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Spiced Peach Punch', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/qxvypq1468924331.jpg', 'idDrink': '13032'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.708599" elapsed="0.003227"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.712568" level="INFO">${nombre} = Spiking coffee</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.712180" elapsed="0.000530"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.713929" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/isql6y1487602375.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.712884" elapsed="0.001592"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.716007" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.714900" elapsed="0.001347"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Spiking coffee', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/isql6y1487602375.jpg', 'idDrink': '12780'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.711980" elapsed="0.004393"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.717243" level="INFO">${nombre} = Strawberry Lemonade</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.716939" elapsed="0.000456"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.717868" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/spvvxp1468924425.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.717592" elapsed="0.000534"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.719410" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.718279" elapsed="0.001535"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Strawberry Lemonade', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/spvvxp1468924425.jpg', 'idDrink': '13036'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.716566" elapsed="0.003377"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.720614" level="INFO">${nombre} = Strawberry Shivers</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.720330" elapsed="0.000507"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.721363" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/9h1vvt1487603404.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.720996" elapsed="0.000531"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.723224" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.721701" elapsed="0.001857"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Strawberry Shivers', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/9h1vvt1487603404.jpg', 'idDrink': '12722'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.720090" elapsed="0.003673"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.724554" level="INFO">${nombre} = Sweet Bananas</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.724224" elapsed="0.000584"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.725475" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/sxpcj71487603345.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.725003" elapsed="0.000669"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.726973" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.725975" elapsed="0.001253"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Sweet Bananas', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/sxpcj71487603345.jpg', 'idDrink': '12724'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.723966" elapsed="0.003419"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.728252" level="INFO">${nombre} = Thai Coffee</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.727910" elapsed="0.000530"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.728993" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/wquwxs1441247025.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.728660" elapsed="0.000568"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.730721" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.729438" elapsed="0.001561"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Thai Coffee', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/wquwxs1441247025.jpg', 'idDrink': '12782'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.727605" elapsed="0.003503"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.731953" level="INFO">${nombre} = Thai Iced Coffee</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.731579" elapsed="0.000528"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.732681" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/rqpypv1441245650.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.732288" elapsed="0.000578"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.734410" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.733108" elapsed="0.001518"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Thai Iced Coffee', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/rqpypv1441245650.jpg', 'idDrink': '12784'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.731244" elapsed="0.003506"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.735848" level="INFO">${nombre} = Thai Iced Tea</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.735347" elapsed="0.000804"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.736873" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/trvwpu1441245568.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.736448" elapsed="0.000787"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.738583" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.737525" elapsed="0.001366"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Thai Iced Tea', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/trvwpu1441245568.jpg', 'idDrink': '12786'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.734953" elapsed="0.004069"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.740505" level="INFO">${nombre} = Tomato Tang</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.739966" elapsed="0.000738"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.741476" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/869qr81487603278.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.740900" elapsed="0.000828"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.743455" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.741993" elapsed="0.001908"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Tomato Tang', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/869qr81487603278.jpg', 'idDrink': '12726'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.739575" elapsed="0.004577"/>
+</iter>
+<iter>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.745257" level="INFO">${nombre} = Yoghurt Cooler</msg>
+<var>${nombre}</var>
+<arg>${drink}</arg>
+<arg>strDrink</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.744770" elapsed="0.000686"/>
+</kw>
+<kw name="Get From Dictionary" owner="Collections">
+<msg time="2026-01-21T15:50:48.746184" level="INFO">${imagen} = https://www.thecocktaildb.com/images/media/drink/trttrv1441254466.jpg</msg>
+<var>${imagen}</var>
+<arg>${drink}</arg>
+<arg>strDrinkThumb</arg>
+<doc>Returns a value from the given ``dictionary`` based on the given ``key``.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.745658" elapsed="0.000834"/>
+</kw>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.747773" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;p&gt;${nombre}&lt;br&gt;&lt;img src="${imagen}" width="150"&gt;&lt;/p&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.746651" elapsed="0.001428"/>
+</kw>
+<var name="${drink}">{'strDrink': 'Yoghurt Cooler', 'strDrinkThumb': 'https://www.thecocktaildb.com/images/media/drink/trttrv1441254466.jpg', 'idDrink': '12728'}</var>
+<status status="PASS" start="2026-01-21T15:50:48.744389" elapsed="0.003827"/>
+</iter>
+<var>${drink}</var>
+<value>@{drinks}</value>
+<status status="PASS" start="2026-01-21T15:50:48.508878" elapsed="0.239432"/>
+</for>
+<kw name="Append To File" owner="OperatingSystem">
+<msg time="2026-01-21T15:50:48.749879" level="INFO" html="true">Appended to file '&lt;a href="file://C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html"&gt;C:\Users\IvanaMasciangioli\OneDrive - EPAM\Documents\Capacitaciones\Api\results\reporte_tragos.html&lt;/a&gt;'.</msg>
+<arg>${REPORTE_HTML}</arg>
+<arg>&lt;/body&gt;&lt;/html&gt;</arg>
+<doc>Appends the given content to the specified file.</doc>
+<status status="PASS" start="2026-01-21T15:50:48.748992" elapsed="0.001230"/>
+</kw>
+<status status="PASS" start="2026-01-21T15:50:48.056201" elapsed="0.694762"/>
+</test>
+<status status="PASS" start="2026-01-21T15:50:47.918381" elapsed="0.839023"/>
+</suite>
+<status status="PASS" start="2026-01-21T15:50:47.868971" elapsed="0.897339"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="Api" id="s1" pass="1" fail="0" skip="0">Api</stat>
+<stat name="Cocktail Api Test" id="s1-s1" pass="1" fail="0" skip="0">Api.Cocktail Api Test</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
