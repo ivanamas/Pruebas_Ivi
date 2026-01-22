@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Reporte Comparación de Títulos</title>
+    <style>
+        body {
+            font-family: Tahoma, sans-serif;
+            background: linear-gradient(120deg, #e3f0fc 0%, #f5f7fa 100%);
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        .container {
+            max-width: 700px;
+            margin: 40px auto;
+            background: linear-gradient(135deg, #fff 60%, #e3f0fc 100%);
+            border-radius: 18px;
+            box-shadow: 0 8px 36px #90a4ae;
+            padding: 38px 48px 48px 48px;
+            border: 4px solid #90a4ae;
+            text-align: center;
+        }
+        h1 {
+            color: #1976d2;
+            text-align: center;
+            margin-bottom: 28px;
+            letter-spacing: 2px;
+            font-family: Tahoma, sans-serif;
+            background: linear-gradient(90deg, #e3f0fc 60%, #90caf9 100%);
+            border-radius: 18px;
+            padding: 20px 0 16px 0;
+            box-shadow: 0 2px 12px #90caf9;
+            text-shadow: 1px 1px 0 #fff, 2px 2px 0 #90caf9;
+        }
+        .section {
+            margin-bottom: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .card {
+            flex: 1 1 0px;
+            max-width: 520px;
+            background: linear-gradient(120deg, #e3f0fc 60%, #fff 100%);
+            border-radius: 16px;
+            box-shadow: 0 2px 16px #90a4ae;
+            padding: 24px 30px;
+            margin: 0 10px;
+            border: 2.5px solid #90a4ae;
+            min-width: 280px;
+            text-align: center;
+        }
+        .section-title {
+            color: #1976d2;
+            font-size: 1.25em;
+            margin-bottom: 14px;
+            border-left: 8px solid #90caf9;
+            padding-left: 14px;
+            background: linear-gradient(90deg, #e3f0fc 60%, #90caf9 100%);
+            border-radius: 10px;
+            box-shadow: 0 1px 6px #90caf9;
+            font-family: Tahoma, sans-serif;
+            letter-spacing: 1px;
+            text-align: center;
+        }
+        .abstract-box {
+            font-size:1.12em;
+            color:#1976d2;
+            margin-bottom: 0;
+            font-family: Tahoma, sans-serif;
+        }
+        .titulo-comparado {
+            font-size:1.08em;
+            color:#1976d2;
+            background: #e3f0fc;
+            border: 2px solid #90caf9;
+            border-radius: 10px;
+            padding: 10px 18px;
+            margin: 18px 0 10px 0;
+            font-family: Tahoma, sans-serif;
+            text-align: center;
+            box-shadow: 0 1px 6px #90caf9;
+        }
+        .result {
+            text-align: center;
+            font-size: 1.22em;
+            color: #1976d2;
+            font-weight: bold;
+            margin-top: 0;
+            text-shadow: 1px 1px 0 #90caf9;
+            font-family: Tahoma, sans-serif;
+        }
+        .result.fail {
+            color: #b91c1c;
+        }
+        .statistics {
+            width: 100%;
+            color: #1976d2;
+            margin: 0 auto;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .statistics-table {
+            width: 100%;
+            max-width: 460px;
+            min-width: 320px;
+            border-collapse: collapse;
+            margin-top: 8px;
+            margin-left: auto;
+            margin-right: auto;
+            table-layout: fixed;
+        }
+        /* Multicolor theme for the report */
+        body {
+            background: linear-gradient(135deg, #d6e6f7 0%, #c1f7d6 100%);
+        }
+        .card {
+            background: linear-gradient(120deg, #c1f7d6 0%, #d6e6f7 100%);
+            border: 2px solid #b3b6d6;
+            box-shadow: 0 4px 16px 0 rgba(179, 182, 214, 0.13);
+        }
+        h1, .main-title {
+            color: #4b2e83;
+            background: linear-gradient(90deg, #c1f7d6 0%, #d6e6f7 100%);
+            border-radius: 12px;
+            padding: 10px 0;
+        }
+        .section-title {
+            color: #4b2e83;
+            background: linear-gradient(90deg, #c1f7d6 60%, #d6e6f7 100%);
+            border-left: 8px solid #b3b6d6;
+        }
+        .titulo-comparado {
+            background: linear-gradient(90deg, #d6e6f7 0%, #c1f7d6 100%);
+            color: #4b2e83;
+            border: 2px solid #b3b6d6;
+        }
+        .abstract-box {
+            color: #4b2e83;
+        }
+        .result {
+            color: #4b2e83;
+            background: linear-gradient(90deg, #c1f7d6 0%, #d6e6f7 100%);
+            border-radius: 8px;
+            padding: 4px 0;
+        }
+        .result.fail {
+            color: #b91c1c;
+        }
+        .duration {
+            color: #4b2e83;
+            background: linear-gradient(90deg, #c1f7d6 0%, #d6e6f7 100%);
+            border-radius: 6px;
+            padding: 2px 8px;
+            font-weight: bold;
+        }
+        .statistics-table {
+            width: 100%;
+            max-width: 460px;
+            min-width: 320px;
+            border-collapse: collapse;
+            margin-top: 8px;
+            margin-left: auto;
+            margin-right: auto;
+            table-layout: fixed;
+        }
+        .statistics-table th, .statistics-table td {
+            width: 20%;
+            text-align: center;
+            padding: 8px 0;
+            font-size: 0.85em;
+            border: 2px solid #b3b6d6;
+            font-family: Tahoma, sans-serif;
+            word-break: break-word;
+        }
+        .statistics-table th {
+            background: linear-gradient(90deg, #c1f7d6 60%, #d6e6f7 100%);
+            color: #4b2e83;
+            font-weight: 700;
+            letter-spacing: 1px;
+        }
+        .statistics-table td {
+            background: linear-gradient(90deg, #d6e6f7 0%, #c1f7d6 100%);
+            color: #4b2e83;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Reporte Comparación de Títulos</h1>
+        <!-- Se eliminaron las capturas de pantalla -->
+        <div class="section">
+            <div class="card">
+                <div class="section-title">Comparación de títulos</div>
+                <div class="titulo-comparado">
+                    Título comparado:<br>
+                    <b>Goyo Degano: Estamos manijas de volver a entrar al estudio con Bandalos Chinos</b>
+                </div>
+                <div class="screenshots" style="display: flex; justify-content: center; gap: 24px; margin: 18px 0 10px 0;">
+                    <div>
+                        <img src="Capturas/TITULO_WEB.png" alt="Captura Web" style="width: 260px; height: 180px; object-fit: contain; border-radius: 10px; border: 3px solid #1976d2; box-shadow: 0 2px 8px #90caf9; background: #fff; display: block;" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <div class="screenshots-caption" style="display:none;color:#b91c1c;">Imagen no encontrada: TITULO_WEB.png</div>
+                        <div class="screenshots-caption" style="background: linear-gradient(90deg, #e3f0fc 0%, #90caf9 100%); color: #1976d2; border-radius: 6px; padding: 2px 8px; margin-top: 6px; font-weight: bold;">WEB</div>
+                    </div>
+                    <div>
+                        <img src="Capturas/TITULO_MOBILE.png" alt="Captura Mobile" style="width: 260px; height: 180px; object-fit: contain; border-radius: 10px; border: 3px solid #1976d2; box-shadow: 0 2px 8px #90caf9; background: #fff; display: block;" onerror="this.style.display='none';this.nextElementSibling.style.display='block';">
+                        <div class="screenshots-caption" style="display:none;color:#b91c1c;">Imagen no encontrada: TITULO_MOBILE.png</div>
+                        <div class="screenshots-caption" style="background: linear-gradient(90deg, #e3f0fc 0%, #90caf9 100%); color: #1976d2; border-radius: 6px; padding: 2px 8px; margin-top: 6px; font-weight: bold;">MOBILE</div>
+                    </div>
+                </div>
+                <div class="abstract-box">
+                    Se realizó la comparación entre los títulos obtenidos en Web y Mobile.<br>
+                    <span style="color:#16a34a;font-weight:bold;">El resultado fue exitoso.</span>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="card">
+                <div class="section-title">Resultado del Test Case</div>
+                <div class="result">
+                    El test case <b>Comparar Titulos</b> finalizó correctamente.<br>
+                    <span style="font-size:0.95em; color:#4b2e83; font-weight:bold; background: linear-gradient(90deg, #c1f7d6 0%, #d6e6f7 100%); border-radius: 6px; padding: 2px 8px;">Fecha de ejecución: 13/01/2026</span><br>
+                    <span style="font-size:0.95em; color:#4b2e83; font-weight:bold; background: linear-gradient(90deg, #c1f7d6 0%, #d6e6f7 100%); border-radius: 6px; padding: 2px 8px;">Duración: 40.00 segundos</span>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="card">
+                <div class="section-title">Estadísticas de la ejecución</div>
+                <div class="statistics">
+                    <table class="statistics-table">
+                        <tr>
+                            <th>Suite</th>
+                            <th>Casos Totales</th>
+                            <th>Pasados</th>
+                            <th>Fallidos</th>
+                            <th>Saltados</th>
+                        </tr>
+                        <tr>
+                            <td>Robot.WebMobile</td>
+                            <td>1</td>
+                            <td>1</td>
+                            <td>0</td>
+                            <td>0</td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
